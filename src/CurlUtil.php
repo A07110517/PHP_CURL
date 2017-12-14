@@ -37,6 +37,9 @@ class CurlUtil
         if (isset($array['header']) && $array['header']) {
             curl_setopt($ch, CURLOPT_HEADER, 1);
         }
+        if (isset($array['cookie']) && $array['cookie']) {	//cookie
+            curl_setopt($ch, CURLOPT_COOKIE, $array['cookie']);
+        }
         if (isset($array['httpheader'])) {
             curl_setopt($ch, CURLOPT_HTTPHEADER, $array['httpheader']);
         }
